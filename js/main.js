@@ -657,6 +657,21 @@
       });
     }
 
+    // Mobile/Tablet Filter Options Toggle
+    const filterToggleBtn = document.getElementById('mobile-filter-toggle');
+    const filterPanel = document.getElementById('shop-filter-panel');
+    const filterIcon = document.getElementById('filter-toggle-icon');
+
+    if (filterToggleBtn && filterPanel) {
+      filterToggleBtn.addEventListener('click', () => {
+        const isOpen = filterPanel.classList.toggle('open');
+        filterToggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if (filterIcon) {
+          filterIcon.textContent = isOpen ? '−' : '+';
+        }
+      });
+    }
+
     // Initial render
     filterAndRender();
 
