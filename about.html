@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Atelier &amp; Heritage — vélène.</title>
+  <meta name="description" content="Discover the origins, philosophy of quiet luxury, and master artisan craftsmanship defining Maison Vélène Paris.">
+  <meta name="keywords" content="fashion brand story, atelier Paris, slow fashion, sustainable luxury, artisan tailoring">
+  <meta property="og:title" content="The Atelier &amp; Heritage — MAISON VÉLÈNE">
+  <meta property="og:description" content="Discover the origins, philosophy of quiet luxury, and master artisan craftsmanship defining Maison Vélène Paris.">
+  <meta property="og:image" content="images/about_atelier.jpg">
+  <!-- Favicon / Brand Icon -->
+  <link rel="icon" type="image/jpeg" href="images/brand_logo.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="images/favicon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Editorial Announcement Bar -->
+  <aside class="announcement-bar" aria-label="Store Announcement">
+    <div></div>
+    <div class="announcement-message">
+      Complimentary Worldwide Express Courier on Orders Over $250
+    </div>
+    <div class="announcement-right">
+      <select id="currency-selector" class="currency-select" aria-label="Currency Selector">
+        <option value="USD">USD ($)</option>
+        <option value="EUR">EUR (€)</option>
+        <option value="GBP">GBP (£)</option>
+      </select>
+    </div>
+  </aside>
+
+  <!-- Global Header Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <button type="button" class="mobile-toggle" aria-label="Open Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <a href="index.html" class="brand-logo" aria-label="vélène. Home">
+        <img src="images/brand_logo.jpg" alt="vélène. logo" class="brand-logo-mark">
+        <div class="brand-text-wrapper">
+          <span class="brand-name">vélène.</span>
+          <span class="brand-sub">atelier · paris</span>
+        </div>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="action-btn cart-open-trigger" title="Shopping Bag" aria-label="View Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="badge-count cart-badge-count">1</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-content">
+      <div>
+        <div class="mobile-nav-header">
+          <div style="display:flex; align-items:center; gap:0.5rem;">
+            <img src="images/brand_logo.jpg" alt="vélène. logo" style="width:26px; height:26px; border-radius:3px;">
+            <span class="brand-name" style="font-size: 1.3rem; text-transform: lowercase;">vélène.</span>
+          </div>
+          <button type="button" class="mobile-nav-close" aria-label="Close navigation" style="font-size: 1.5rem; color: var(--color-noir);">&times;</button>
+        </div>
+        <div class="mobile-links">
+          <a href="index.html" class="mobile-link">Home</a>
+          <a href="shop.html" class="mobile-link">Shop</a>
+          <a href="about.html" class="mobile-link active">About</a>
+          <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+      </div>
+      <div style="border-top: 1px solid var(--color-border); padding-top: 1.5rem;">
+        <p style="font-size: 0.8rem; color: var(--color-stone); margin-bottom: 0.5rem;">Paris · Rue Saint-Honoré</p>
+        <p style="font-size: 0.8rem; color: var(--color-stone);">New York · Madison Avenue</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide-out Cart Drawer -->
+  <div class="cart-drawer-overlay" role="dialog" aria-modal="true" aria-label="Shopping Bag">
+    <div class="cart-drawer">
+      <div class="cart-drawer-header">
+        <h3 class="cart-drawer-title">Shopping Bag</h3>
+        <button type="button" class="cart-drawer-close" aria-label="Close shopping bag">&times;</button>
+      </div>
+      <div class="cart-shipping-meter">
+        <div class="shipping-meter-text">Add <strong>$0</strong> more for complimentary courier</div>
+        <div class="shipping-progress-bar">
+          <div class="shipping-progress-fill"></div>
+        </div>
+      </div>
+      <div class="cart-items-container"></div>
+      <div class="cart-drawer-footer">
+        <div class="cart-subtotal-row">
+          <span class="cart-subtotal-label">Subtotal</span>
+          <span class="cart-subtotal-val">$890</span>
+        </div>
+        <div class="cart-tax-notice">Taxes, customs &amp; express shipping calculated at private checkout.</div>
+        <button type="button" class="btn btn-primary btn-full btn-checkout-cart">
+          Proceed to Private Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- Page Header -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Atelier Philosophy</span>
+        <h1>The Pursuit of Quiet Distinction</h1>
+        <p class="lead" style="max-width: 650px; margin: 0.5rem auto 0;">
+          Founded on the conviction that true luxury resides in architectural restraint, pure natural fibers, and pieces that endure through decades.
+        </p>
+      </div>
+    </section>
+
+    <!-- Brand Story 2-Column Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="about-hero-grid">
+          <div>
+            <span class="eyebrow">Our Origins</span>
+            <h2>Architectural Form Meets Heirloom Textiles</h2>
+            <p style="margin-bottom: 1.25rem;">
+              Established between Paris and New York, Maison Vélène emerged from an intimate collective of master patternmakers, tailors, and textile purists. We set out to reject the ceaseless churn of seasonal fast fashion in favor of a timeless, considered uniform.
+            </p>
+            <p style="margin-bottom: 1.5rem;">
+              Every silhouette begins with geometry and restraint. We look to modern brutalist architecture, classic French haute couture construction, and Japanese functional minimalism. Our goal is never to distract, but rather to frame the posture and natural grace of the wearer.
+            </p>
+            <div style="display: flex; gap: 2rem; border-top: 1px solid var(--color-border); padding-top: 1.5rem;">
+              <div>
+                <div style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 600; color: var(--color-noir);">100%</div>
+                <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-stone);">Traceable Textiles</div>
+              </div>
+              <div>
+                <div style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 600; color: var(--color-noir);">48h</div>
+                <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-stone);">Artisan Basting per Coat</div>
+              </div>
+              <div>
+                <div style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 600; color: var(--color-noir);">0%</div>
+                <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-stone);">Synthetic Blends</div>
+              </div>
+            </div>
+          </div>
+          <div style="aspect-ratio: 4/5; overflow: hidden; box-shadow: var(--shadow-lg);">
+            <img src="images/about_atelier.jpg" alt="Maison Vélène Paris Design Atelier Studio and architectural backdrop" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+
+        <!-- Pull Quote Block -->
+        <div class="about-quote-box">
+          <blockquote class="about-quote">
+            "We do not design garments for the fleeting gaze of an algorithm. We design architectural heirlooms meant to be lived in, treasured, and handed down across generations."
+          </blockquote>
+          <div class="about-author">— Éléonore Vélène &amp; Marcus Hall, Creative Directors</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="section" style="background-color: var(--color-surface);" aria-labelledby="values-heading">
+      <div class="container">
+        <div class="section-header" style="justify-content: center; text-align: center;">
+          <div class="section-title-wrap" style="text-align: center; margin: 0 auto;">
+            <span class="eyebrow" style="text-align: center; display: block;">Our Guiding Tenets</span>
+            <h2 id="values-heading" style="text-align: center;">The Pillars of Our Atelier</h2>
+          </div>
+        </div>
+
+        <div class="values-grid">
+          <!-- Value 1 -->
+          <div class="value-card">
+            <svg class="value-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+            <h4>Pure Natural Fibers</h4>
+            <p>
+              We exclusively commission virgin Biella wool, Mongolian organic cashmere, French flax linen, and heavy Mulberry silks. Zero synthetic polyesters or acrylics.
+            </p>
+          </div>
+
+          <!-- Value 2 -->
+          <div class="value-card">
+            <svg class="value-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+            <h4>Slow Intentional Production</h4>
+            <p>
+              Every collection is cut in limited runs of no more than 150 pieces per silhouette to eradicate excess inventory and preserve the intimacy of the craft.
+            </p>
+          </div>
+
+          <!-- Value 3 -->
+          <div class="value-card">
+            <svg class="value-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+            <h4>Master Tailor Provenance</h4>
+            <p>
+              Our tailoring houses in Northern Italy and Normandy boast multi-generational legacies, offering fair living wages and master apprenticeships.
+            </p>
+          </div>
+
+          <!-- Value 4 -->
+          <div class="value-card">
+            <svg class="value-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <h4>Lifetime Repair Pledge</h4>
+            <p>
+              We stand behind our silhouettes with complimentary button replacements, hem alterations, and cashmere maintenance consultations at our flagship salons.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Behind The Scenes Section -->
+    <section class="section" aria-labelledby="craft-heading">
+      <div class="container">
+        <div class="about-hero-grid about-craft-grid">
+          <div style="aspect-ratio: 4/5; overflow: hidden; box-shadow: var(--shadow-lg);">
+            <img src="images/about_craft.jpg" alt="Master artisan hand-stitching cashmere coat collar with needle and thread" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div>
+            <span class="eyebrow">The Craft</span>
+            <h2 id="craft-heading">48 Hours of Human Precision</h2>
+            <p style="margin-bottom: 1.25rem;">
+              Behind each seam lies decades of muscle memory. A Maison Vélène double-faced cashmere coat requires over two days of dedicated hand-stitching. The fabric edges are carefully split open with a surgeon's blade, folded inward, and blind-stitched by hand so that no raw edges or visible threads appear.
+            </p>
+            <p style="margin-bottom: 2rem;">
+              The result is a garment that feels as soft and finished on the interior as it does on the exterior — a private pleasure known only to the wearer.
+            </p>
+            <a href="shop.html" class="btn btn-primary">Discover the Collection</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit Flagship CTA -->
+    <section class="section" style="background-color: var(--color-noir); color: #FAF8F5; text-align: center;">
+      <div class="container container-narrow">
+        <span class="eyebrow" style="color: #E2BC9B;">Flagship Experience</span>
+        <h2 style="color: #FFFFFF; margin-bottom: 1rem;">Experience the Atelier in Person</h2>
+        <p style="color: rgba(255,255,255,0.75); margin-bottom: 2rem;">
+          Our salons in Paris and New York welcome private appointments for personal tailoring, custom fittings, and private wardrobe viewings.
+        </p>
+        <a href="contact.html" class="btn btn-primary" style="background: #FFFFFF; color: var(--color-noir); border-color: #FFFFFF;">
+          Schedule A Private Consultation
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" style="text-decoration:none; display:flex; align-items:center; gap:0.5rem;">
+            <img src="images/brand_logo.jpg" alt="vélène. logo" style="width:24px; height:24px; border-radius:3px; filter: brightness(1.2);">
+            <h3 style="margin:0; font-size:1.4rem; text-transform: lowercase; font-family: var(--font-serif);">vélène.</h3>
+          </a>
+          <div class="tagline" style="text-transform: lowercase;">atelier de prêt-à-porter</div>
+          <p>
+            Architectural tailoring, heirloom textiles, and contemporary poise crafted in limited editions for modern connoisseurs worldwide.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://facebook.com" class="social-icon-link" aria-label="Facebook" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://x.com" class="social-icon-link" aria-label="X (Twitter)" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://whatsapp.com" class="social-icon-link" aria-label="WhatsApp" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com" class="social-icon-link" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Collections</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html?cat=women">Women's Atelier</a></li>
+            <li><a href="shop.html?cat=men">Men's Sartorial</a></li>
+            <li><a href="shop.html?cat=kids">Youth Edition</a></li>
+            <li><a href="shop.html?cat=accessories">Leather Goods &amp; Boots</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Concierge</h5>
+          <ul class="footer-links">
+            <li><a href="contact.html">Private Client Styling</a></li>
+            <li><a href="contact.html#faq">Sizing &amp; Tailoring Guide</a></li>
+            <li><a href="contact.html#shipping">Worldwide Shipping</a></li>
+            <li><a href="about.html">The Atelier Story</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Private Salon</h5>
+          <p style="font-size: 0.8125rem; color: rgba(255,255,255,0.65); margin-bottom: 1rem;">
+            Receive invitations to private runway previews and limited releases.
+          </p>
+          <form class="newsletter-form" action="#" method="POST" novalidate style="margin-top:0;">
+            <input type="email" class="newsletter-input" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); color:#FFF;" placeholder="Your email address" required>
+            <button type="submit" class="btn btn-primary btn-sm" style="background-color: #FFFFFF; color: var(--color-noir); border-color: #FFF;">Join</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Maison Vélène Atelier Paris. All rights reserved.</div>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="privacy.html#terms">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

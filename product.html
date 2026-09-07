@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Vélène Double-Faced Cashmere Trench — vélène.</title>
+  <meta name="description" content="Handcrafted in Biella from 100% double-faced brushed Mongolian cashmere. Features storm flaps, horn buttons, and an unstructured architectural drape.">
+  <meta name="keywords" content="cashmere trench coat, luxury coat, camel coat, atelier outerwear, Maison Velene">
+  <meta property="og:title" content="The Vélène Double-Faced Cashmere Trench — MAISON VÉLÈNE">
+  <meta property="og:description" content="Handcrafted in Biella from 100% double-faced brushed Mongolian cashmere. Unstructured architectural drape.">
+  <meta property="og:image" content="images/product_coat_front.jpg">
+  <!-- Favicon / Brand Icon -->
+  <link rel="icon" type="image/jpeg" href="images/brand_logo.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="images/favicon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Editorial Announcement Bar -->
+  <aside class="announcement-bar" aria-label="Store Announcement">
+    <div></div>
+    <div class="announcement-message">
+      Complimentary Worldwide Express Courier on Orders Over $250
+    </div>
+    <div class="announcement-right">
+      <select id="currency-selector" class="currency-select" aria-label="Currency Selector">
+        <option value="USD">USD ($)</option>
+        <option value="EUR">EUR (€)</option>
+        <option value="GBP">GBP (£)</option>
+      </select>
+    </div>
+  </aside>
+
+  <!-- Global Header Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <button type="button" class="mobile-toggle" aria-label="Open Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <a href="index.html" class="brand-logo" aria-label="vélène. Home">
+        <img src="images/brand_logo.jpg" alt="vélène. logo" class="brand-logo-mark">
+        <div class="brand-text-wrapper">
+          <span class="brand-name">vélène.</span>
+          <span class="brand-sub">atelier · paris</span>
+        </div>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link active">Shop</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="action-btn cart-open-trigger" title="Shopping Bag" aria-label="View Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="badge-count cart-badge-count">1</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-content">
+      <div>
+        <div class="mobile-nav-header">
+          <div style="display:flex; align-items:center; gap:0.5rem;">
+            <img src="images/brand_logo.jpg" alt="vélène. logo" style="width:26px; height:26px; border-radius:3px;">
+            <span class="brand-name" style="font-size: 1.3rem; text-transform: lowercase;">vélène.</span>
+          </div>
+          <button type="button" class="mobile-nav-close" aria-label="Close navigation" style="font-size: 1.5rem; color: var(--color-noir);">&times;</button>
+        </div>
+        <div class="mobile-links">
+          <a href="index.html" class="mobile-link">Home</a>
+          <a href="shop.html" class="mobile-link">Shop</a>
+          <a href="about.html" class="mobile-link">About</a>
+          <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+      </div>
+      <div style="border-top: 1px solid var(--color-border); padding-top: 1.5rem;">
+        <p style="font-size: 0.8rem; color: var(--color-stone); margin-bottom: 0.5rem;">Paris · Rue Saint-Honoré</p>
+        <p style="font-size: 0.8rem; color: var(--color-stone);">New York · Madison Avenue</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide-out Cart Drawer -->
+  <div class="cart-drawer-overlay" role="dialog" aria-modal="true" aria-label="Shopping Bag">
+    <div class="cart-drawer">
+      <div class="cart-drawer-header">
+        <h3 class="cart-drawer-title">Shopping Bag</h3>
+        <button type="button" class="cart-drawer-close" aria-label="Close shopping bag">&times;</button>
+      </div>
+      <div class="cart-shipping-meter">
+        <div class="shipping-meter-text">Add <strong>$0</strong> more for complimentary courier</div>
+        <div class="shipping-progress-bar">
+          <div class="shipping-progress-fill"></div>
+        </div>
+      </div>
+      <div class="cart-items-container"></div>
+      <div class="cart-drawer-footer">
+        <div class="cart-subtotal-row">
+          <span class="cart-subtotal-label">Subtotal</span>
+          <span class="cart-subtotal-val">$890</span>
+        </div>
+        <div class="cart-tax-notice">Taxes, customs &amp; express shipping calculated at private checkout.</div>
+        <button type="button" class="btn btn-primary btn-full btn-checkout-cart">
+          Proceed to Private Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Size Guide Modal -->
+  <div id="size-guide-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Size &amp; Fit Guide">
+    <div class="modal-box">
+      <button type="button" class="modal-close-btn" onclick="MaisonVelene.closeModal('size-guide-modal')">&times;</button>
+      <div class="eyebrow">Atelier Tailoring Guide</div>
+      <h2>Size &amp; Fit Measurements</h2>
+      <p style="margin-top: 0.5rem; margin-bottom: 1.5rem;">All measurements reflect body measurements in inches and standard international sizing equivalents.</p>
+      
+      <table class="size-table">
+        <thead>
+          <tr>
+            <th>Atelier Size</th>
+            <th>US / UK</th>
+            <th>EU / FR</th>
+            <th>Bust (in)</th>
+            <th>Waist (in)</th>
+            <th>Hip (in)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>XS</strong></td>
+            <td>0 - 2</td>
+            <td>34</td>
+            <td>32 - 33"</td>
+            <td>24 - 25"</td>
+            <td>34 - 35"</td>
+          </tr>
+          <tr>
+            <td><strong>S</strong></td>
+            <td>4 - 6</td>
+            <td>36</td>
+            <td>34 - 35"</td>
+            <td>26 - 27"</td>
+            <td>36 - 37"</td>
+          </tr>
+          <tr>
+            <td><strong>M</strong></td>
+            <td>8 - 10</td>
+            <td>38 - 40</td>
+            <td>36 - 37"</td>
+            <td>28 - 29"</td>
+            <td>38 - 39"</td>
+          </tr>
+          <tr>
+            <td><strong>L</strong></td>
+            <td>12 - 14</td>
+            <td>42</td>
+            <td>38 - 40"</td>
+            <td>30 - 32"</td>
+            <td>40 - 42"</td>
+          </tr>
+          <tr>
+            <td><strong>XL</strong></td>
+            <td>16</td>
+            <td>44</td>
+            <td>41 - 43"</td>
+            <td>33 - 35"</td>
+            <td>43 - 45"</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top: 2rem; background: var(--color-surface); padding: 1.25rem; border-left: 2px solid var(--color-accent); font-size: 0.85rem;">
+        <strong>Bespoke Fitting Advisory:</strong> If you are between sizes or desire an oversized relaxed drape as styled on the Paris runway, we recommend ordering your true size. For tailored precision, our concierge offers complimentary fitting assistance.
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <div class="container" style="padding-top: 2rem; padding-bottom: 5rem;">
+
+      <!-- Main Product Details Grid -->
+      <div class="product-detail-grid">
+
+        <!-- Left: Sticky Multi-Angle Thumbnail Gallery -->
+        <div class="product-gallery-sticky">
+          <!-- Thumbnail Buttons -->
+          <div class="product-gallery-thumbs">
+            <button type="button" class="thumb-btn active" data-full-img="images/product_coat_front.jpg" aria-label="View front studio shot">
+              <img src="images/product_coat_front.jpg" alt="Camel cashmere coat front view">
+            </button>
+            <button type="button" class="thumb-btn" data-full-img="images/product_coat_side.jpg" aria-label="View side profile angle">
+              <img src="images/product_coat_side.jpg" alt="Camel cashmere coat side view">
+            </button>
+            <button type="button" class="thumb-btn" data-full-img="images/product_coat_detail.jpg" aria-label="View fabric texture and horn buttons">
+              <img src="images/product_coat_detail.jpg" alt="Camel cashmere coat collar detail">
+            </button>
+            <button type="button" class="thumb-btn" data-full-img="images/product_coat_styled.jpg" aria-label="View street style look">
+              <img src="images/product_coat_styled.jpg" alt="Model walking in Paris wearing the cashmere trench">
+            </button>
+          </div>
+
+          <!-- Main High-Res Viewer -->
+          <div class="product-gallery-main">
+            <img id="product-main-view" class="gallery-main-img" src="images/product_coat_front.jpg" alt="The Vélène Double-Faced Cashmere Trench">
+          </div>
+        </div>
+
+        <!-- Right: Product Purchase Summary & Options -->
+        <div class="product-summary-col">
+          <div class="product-rating-row">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span>4.9 / 5.0 (48 Verified Atelier Reviews)</span>
+          </div>
+
+          <span class="eyebrow">Edition No. 04 · Biella Mill</span>
+          <h1 id="p-title" class="product-detail-title">The Vélène Double-Faced Cashmere Trench</h1>
+          <div class="product-detail-price">$890</div>
+
+          <p class="product-detail-desc">
+            Cut with architectural precision from 100% double-faced brushed Mongolian cashmere, spun exclusively for Maison Vélène in historic Piedmontese mills. Unlined for weightless drape and effortless layering from early autumn through spring.
+          </p>
+
+          <!-- Color Swatch Selector -->
+          <div style="margin-bottom: 1.5rem;">
+            <div class="selector-label">
+              <span>Color: <strong id="active-color-name">Camel</strong></span>
+            </div>
+            <div class="product-swatches" style="gap: 0.75rem;">
+              <button type="button" class="swatch-circle color-swatch-opt active" data-color-name="Camel" style="width: 24px; height: 24px; background-color: #C28D58;" title="Camel" aria-label="Select Camel color"></button>
+              <button type="button" class="swatch-circle color-swatch-opt" data-color-name="Charcoal" style="width: 24px; height: 24px; background-color: #2A2928;" title="Charcoal" aria-label="Select Charcoal color"></button>
+              <button type="button" class="swatch-circle color-swatch-opt" data-color-name="Ivory" style="width: 24px; height: 24px; background-color: #F2EDE4;" title="Ivory" aria-label="Select Ivory color"></button>
+            </div>
+          </div>
+
+          <!-- Size Selector -->
+          <div>
+            <div class="selector-label">
+              <span>Select Size</span>
+              <button type="button" class="size-guide-btn" onclick="document.getElementById('size-guide-modal').classList.add('open'); document.body.style.overflow = 'hidden';">
+                Size &amp; Fit Guide
+              </button>
+            </div>
+            <div class="size-selector-grid">
+              <button type="button" class="size-option-btn">XS</button>
+              <button type="button" class="size-option-btn">S</button>
+              <button type="button" class="size-option-btn active">M</button>
+              <button type="button" class="size-option-btn">L</button>
+              <button type="button" class="size-option-btn">XL</button>
+            </div>
+
+            <!-- Scarcity indicator -->
+            <div class="stock-alert-pill">
+              <span class="stock-dot"></span>
+              <span id="stock-alert-text">Only 2 pieces remain in size M at our Paris Atelier</span>
+            </div>
+          </div>
+
+          <!-- Quantity & Add to Cart -->
+          <div class="cta-row">
+            <div class="qty-picker">
+              <button type="button" id="qty-minus-btn" aria-label="Decrease quantity">−</button>
+              <input type="text" id="product-qty-input" value="1" readonly aria-label="Quantity">
+              <button type="button" id="qty-plus-btn" aria-label="Increase quantity">+</button>
+            </div>
+            <button type="button" id="btn-add-to-cart-detail" class="btn btn-primary">
+              Add to Shopping Bag
+            </button>
+          </div>
+
+          <button type="button" id="btn-buy-now-detail" class="btn btn-outline btn-full" style="margin-bottom: 2rem;">
+            Direct Buy Now
+          </button>
+
+          <!-- Accordion Tabs -->
+          <div class="accordion-group">
+            <!-- Details -->
+            <div class="accordion-item active">
+              <button type="button" class="accordion-trigger">
+                <span>Design &amp; Silhouette</span>
+                <span class="icon">+</span>
+              </button>
+              <div class="accordion-content">
+                <ul style="list-style: disc; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <li>Generous storm flap and wide notched lapels</li>
+                  <li>Hand-carved sustainable water buffalo horn buttons</li>
+                  <li>Self-fabric tie belt with hand-stitched rectangular buckle</li>
+                  <li>Deep welt side pockets and reinforced inner passport slip</li>
+                  <li>Drop-shoulder architectural sleeve construction</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Fabric & Care -->
+            <div class="accordion-item">
+              <button type="button" class="accordion-trigger">
+                <span>Fabric &amp; Sustainable Origin</span>
+                <span class="icon">+</span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  <strong>Composition:</strong> 100% Mongolian Cashmere, 480 gsm double-faced weave.<br>
+                  <strong>Milled:</strong> Biella, Northern Italy.<br>
+                  <strong>Care:</strong> Specialist luxury dry clean only. Store in provided cedarwood garment bag between seasons. Lightly steam to restore natural cashmere loft.
+                </p>
+              </div>
+            </div>
+
+            <!-- Shipping & Returns -->
+            <div class="accordion-item">
+              <button type="button" class="accordion-trigger">
+                <span>Complimentary Shipping &amp; Atelier Returns</span>
+                <span class="icon">+</span>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Delivered via complimentary express carbon-neutral courier in signature debossed gift packaging with an archival garment bag. Returns and exchanges are welcomed within 30 days of receipt in unworn condition with atelier seals intact.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Related Products Section -->
+      <section class="section-tight" style="border-top: 1px solid var(--color-border); margin-top: 4rem;">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="eyebrow">Complete The Ensemble</span>
+            <h2>Pair It With</h2>
+          </div>
+          <a href="shop.html" class="btn-text">View Full Wardrobe &rarr;</a>
+        </div>
+
+        <div class="products-grid">
+          <!-- Item 1 -->
+          <article class="product-card">
+            <div class="product-image-box">
+              <a href="shop.html">
+                <img src="images/product_silk_dress.jpg" alt="Silk slip dress" class="product-thumb" loading="lazy">
+              </a>
+              <div class="product-actions-bar">
+                <button type="button" class="product-action-btn" onclick="MaisonVelene.openQuickView('velene-silk-slip-dress')">Quick View</button>
+              </div>
+            </div>
+            <div class="product-meta">
+              <span class="product-category-tag">Evening Wear</span>
+              <h4 class="product-title"><a href="shop.html">Charmeuse Silk Slip Dress</a></h4>
+              <div class="product-price-row">
+                <span class="product-price">$460</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2 -->
+          <article class="product-card">
+            <div class="product-image-box">
+              <a href="shop.html">
+                <img src="images/product_leather_bag.jpg" alt="Calfskin leather bag" class="product-thumb" loading="lazy">
+              </a>
+              <div class="product-actions-bar">
+                <button type="button" class="product-action-btn" onclick="MaisonVelene.openQuickView('velene-leather-bag')">Quick View</button>
+              </div>
+            </div>
+            <div class="product-meta">
+              <span class="product-category-tag">Leather Goods</span>
+              <h4 class="product-title"><a href="shop.html">The Paloma Calfskin Tote</a></h4>
+              <div class="product-price-row">
+                <span class="product-price">$950</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3 -->
+          <article class="product-card">
+            <div class="product-image-box">
+              <a href="shop.html">
+                <img src="images/product_wool_blazer.jpg" alt="Charcoal wool blazer" class="product-thumb" loading="lazy">
+              </a>
+              <div class="product-actions-bar">
+                <button type="button" class="product-action-btn" onclick="MaisonVelene.openQuickView('velene-wool-blazer')">Quick View</button>
+              </div>
+            </div>
+            <div class="product-meta">
+              <span class="product-category-tag">Tailoring</span>
+              <h4 class="product-title"><a href="shop.html">Architectural Wool Blazer</a></h4>
+              <div class="product-price-row">
+                <span class="product-price">$680</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4 -->
+          <article class="product-card">
+            <div class="product-image-box">
+              <a href="shop.html">
+                <img src="images/product_chelsea_boots.jpg" alt="Chelsea boots" class="product-thumb" loading="lazy">
+              </a>
+              <div class="product-actions-bar">
+                <button type="button" class="product-action-btn" onclick="MaisonVelene.openQuickView('velene-chelsea-boots')">Quick View</button>
+              </div>
+            </div>
+            <div class="product-meta">
+              <span class="product-category-tag">Footwear</span>
+              <h4 class="product-title"><a href="shop.html">Calfskin Chelsea Boots</a></h4>
+              <div class="product-price-row">
+                <span class="product-price">$490</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" style="text-decoration:none; display:flex; align-items:center; gap:0.5rem;">
+            <img src="images/brand_logo.jpg" alt="vélène. logo" style="width:24px; height:24px; border-radius:3px; filter: brightness(1.2);">
+            <h3 style="margin:0; font-size:1.4rem; text-transform: lowercase; font-family: var(--font-serif);">vélène.</h3>
+          </a>
+          <div class="tagline" style="text-transform: lowercase;">atelier de prêt-à-porter</div>
+          <p>
+            Architectural tailoring, heirloom textiles, and contemporary poise crafted in limited editions for modern connoisseurs worldwide.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://facebook.com" class="social-icon-link" aria-label="Facebook" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://x.com" class="social-icon-link" aria-label="X (Twitter)" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://whatsapp.com" class="social-icon-link" aria-label="WhatsApp" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com" class="social-icon-link" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Collections</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html?cat=women">Women's Atelier</a></li>
+            <li><a href="shop.html?cat=men">Men's Sartorial</a></li>
+            <li><a href="shop.html?cat=kids">Youth Edition</a></li>
+            <li><a href="shop.html?cat=accessories">Leather Goods &amp; Boots</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Concierge</h5>
+          <ul class="footer-links">
+            <li><a href="contact.html">Private Client Styling</a></li>
+            <li><a href="contact.html#faq">Sizing &amp; Tailoring Guide</a></li>
+            <li><a href="contact.html#shipping">Worldwide Shipping</a></li>
+            <li><a href="about.html">The Atelier Story</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Private Salon</h5>
+          <p style="font-size: 0.8125rem; color: rgba(255,255,255,0.65); margin-bottom: 1rem;">
+            Receive invitations to private runway previews and limited releases.
+          </p>
+          <form class="newsletter-form" action="#" method="POST" novalidate style="margin-top:0;">
+            <input type="email" class="newsletter-input" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); color:#FFF;" placeholder="Your email address" required>
+            <button type="submit" class="btn btn-primary btn-sm" style="background-color: #FFFFFF; color: var(--color-noir); border-color: #FFF;">Join</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Maison Vélène Atelier Paris. All rights reserved.</div>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="privacy.html#terms">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

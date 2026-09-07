@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Silhouette Not Found — vélène.</title>
+  <meta name="description" content="The page you requested could not be located in our seasonal archive.">
+  <!-- Favicon / Brand Icon -->
+  <link rel="icon" type="image/jpeg" href="images/brand_logo.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="images/favicon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <aside class="announcement-bar" aria-label="Store Announcement">
+    <div></div>
+    <div class="announcement-message">
+      Complimentary Worldwide Express Courier on Orders Over $250
+    </div>
+    <div class="announcement-right">
+      <select id="currency-selector" class="currency-select" aria-label="Currency Selector">
+        <option value="USD">USD ($)</option>
+        <option value="EUR">EUR (€)</option>
+        <option value="GBP">GBP (£)</option>
+      </select>
+    </div>
+  </aside>
+
+  <!-- Global Header Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <button type="button" class="mobile-toggle" aria-label="Open Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <a href="index.html" class="brand-logo" aria-label="vélène. Home">
+        <img src="images/brand_logo.jpg" alt="vélène. logo" class="brand-logo-mark">
+        <div class="brand-text-wrapper">
+          <span class="brand-name">vélène.</span>
+          <span class="brand-sub">atelier · paris</span>
+        </div>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="action-btn cart-open-trigger" title="Shopping Bag" aria-label="View Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="badge-count cart-badge-count">1</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-content">
+      <div>
+        <div class="mobile-nav-header">
+          <div style="display:flex; align-items:center; gap:0.5rem;">
+            <img src="images/brand_logo.jpg" alt="vélène. logo" style="width:26px; height:26px; border-radius:3px;">
+            <span class="brand-name" style="font-size: 1.3rem; text-transform: lowercase;">vélène.</span>
+          </div>
+          <button type="button" class="mobile-nav-close" aria-label="Close navigation" style="font-size: 1.5rem; color: var(--color-noir);">&times;</button>
+        </div>
+        <div class="mobile-links">
+          <a href="index.html" class="mobile-link">Home</a>
+          <a href="shop.html" class="mobile-link">Shop</a>
+          <a href="about.html" class="mobile-link">About</a>
+          <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide-out Cart Drawer -->
+  <div class="cart-drawer-overlay" role="dialog" aria-modal="true" aria-label="Shopping Bag">
+    <div class="cart-drawer">
+      <div class="cart-drawer-header">
+        <h3 class="cart-drawer-title">Shopping Bag</h3>
+        <button type="button" class="cart-drawer-close" aria-label="Close shopping bag">&times;</button>
+      </div>
+      <div class="cart-shipping-meter">
+        <div class="shipping-meter-text">Add <strong>$0</strong> more for complimentary courier</div>
+        <div class="shipping-progress-bar">
+          <div class="shipping-progress-fill"></div>
+        </div>
+      </div>
+      <div class="cart-items-container"></div>
+      <div class="cart-drawer-footer">
+        <div class="cart-subtotal-row">
+          <span class="cart-subtotal-label">Subtotal</span>
+          <span class="cart-subtotal-val">$890</span>
+        </div>
+        <button type="button" class="btn btn-primary btn-full btn-checkout-cart">
+          Proceed to Private Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 6rem 1rem;">
+    <div class="container container-narrow" style="text-align: center;">
+      <span class="eyebrow">Archival Discrepancy</span>
+      <h1 style="font-size: clamp(3rem, 8vw, 6rem); margin-bottom: 0.5rem; font-weight: 300;">404</h1>
+      <h2 style="margin-bottom: 1rem;">Silhouette Not Found</h2>
+      <p class="lead" style="max-width: 500px; margin: 0 auto 2.5rem;">
+        The silhouette or editorial piece you requested is not present in our current seasonal archive. It may have been completed or renamed.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="index.html" class="btn btn-primary">Return to Maison Home</a>
+        <a href="shop.html" class="btn btn-outline">Explore Current Catalog</a>
+        <a href="contact.html" class="btn btn-outline">Contact Concierge</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Maison Vélène Atelier Paris. All rights reserved.</div>
+      <div style="display: flex; gap: 1.5rem;">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="privacy.html#terms">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
